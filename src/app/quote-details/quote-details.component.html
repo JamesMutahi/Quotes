@@ -1,1 +1,19 @@
-<button (click)='quoteComplete(true)'> Delete </button>
+<div class="container">
+    <div class="value">
+        {{ votes }}
+    </div>
+    <div class="label">
+        Votes:
+    </div>
+
+    <a href (click)="likeVote()">
+        <button> Upvote </button>
+    </a>
+
+
+    <a href (click)="dislikeVote()">
+        <button> DownVote </button>
+    </a>
+    <div class="text-right"><button (click)='quoteComplete(true)'> Delete </button></div>
+
+</div>
