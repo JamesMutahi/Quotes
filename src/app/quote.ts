@@ -1,4 +1,6 @@
+import { DatePipe } from '@angular/common';
 export class Quote {
-      constructor(public id: number, public author: string, public quote: string, public thief: string) {
-      }
+  length: number;
+  constructor(public id: number, public author: string, public quote: string, public thief: string, public time:number) {
+  }
 }
