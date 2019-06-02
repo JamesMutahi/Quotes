@@ -1,6 +1,12 @@
+<div class="container">
+    <div class="row">
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    </div>
+</div>
+
 <div *ngFor='let quote of quotes' class="card text-center">
     <div class="card-header">
-        Stolen by: {{quote.thief}}
+        Post by: {{quote.thief}}
     </div>
     <div class="card-body">
         <blockquote class="blockquote mb-0">

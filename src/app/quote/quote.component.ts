@@ -9,9 +9,15 @@ import { Quote } from './../quote';
 export class QuoteComponent implements OnInit {
 
   quotes = [
-    new Quote(0, 'GOT', 'YNWA', 'JIM'),
+
   ];
 
+  addNewQuote(quote) {
+    const quoteLength = this.quotes.length;
+    quote.id = quoteLength + 1;
+    this.quotes.push(quote);
+    console.log(quote);
+  }
 
   constructor() { }
 

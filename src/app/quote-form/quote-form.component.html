@@ -1,0 +1,27 @@
+<div class="container-fluid text-center">
+    <div class="row">
+        <form (ngSubmit)='submitQuote()' #quoteForm='ngForm' class="was-validated">
+            <div class="form-group">
+
+                <label for="author">Author</label>
+                <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
+            </div>
+            <div class="form-group">
+
+                <label for="thief">Thief</label>
+                <input type="text" class="form-control" id="thief" [(ngModel)]="newQuote.thief" name="thief" #thief="ngModel" required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="quote">Quote</label>
+                <textarea class="form-control" id="quote" rows="4" [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel" required></textarea>
+
+
+            </div>
+
+            <button type="submit" class="btn btn-success"> Add Quote </button>
+        </form>
+    </div>
+</div>
