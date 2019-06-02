@@ -1,4 +1,5 @@
 <div class="container">
+
     <div class="value">
         {{ votes }}
     </div>
@@ -7,13 +8,13 @@
     </div>
 
     <a href (click)="likeVote()">
-        <button> Upvote </button>
+        <button class="btn btn-info"> Upvote </button>
     </a>
 
 
     <a href (click)="dislikeVote()">
-        <button> DownVote </button>
+        <button class="btn btn-warning"> DownVote </button>
     </a>
-    <div class="text-right"><button (click)='quoteComplete(true)'> Delete </button></div>
+    <div class="text-right"><button (click)='quoteComplete(true)' class="btn btn-danger"> Delete </button></div>
 
 </div>
