@@ -1,27 +1,58 @@
-<div class="container-fluid text-center">
-    <div class="row">
-        <form (ngSubmit)='submitQuote()' #quoteForm='ngForm' class="was-validated">
-            <div class="form-group">
+<!-- Modal -->
+<div class="modal fade" id="darkModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog form-dark" role="document">
+        <!--Content-->
+        <div class="modal-content card card-image" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/pricing-table%20(7).jpg');">
+            <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
+                <!--Header-->
+                <div class="modal-header text-center pb-4">
+                    <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalLabel"><strong>NEW</strong> <a class="green-text font-weight-bold"><strong> QUOTE</strong></a></h3>
+                    <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    <!--Body-->
 
-                <label for="author">Author</label>
-                <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
+                    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+                        <div class="md-form mb-5">
+                            <input type="text" id="author" class="form-control validate white-text" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
+                            <label data-error="wrong" data-success="right" for="author">Author</label>
+                        </div>
+
+                        <div class="md-form pb-3">
+                            <input type="text" id="Form-pass5" class="form-control validate white-text" id="thief" [(ngModel)]="newQuote.thief" name="thief" #thief="ngModel" required>
+                            <label data-error="wrong" data-success="right" for="Form-pass5">Thief</label>
+                        </div>
+
+                        <div class="form-group was-validated">
+
+                            <label for="quote">Quote</label>
+                            <textarea class="form-control" id="quote" rows="2" [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel" required></textarea>
+
+
+                        </div>
+                        <!--Grid row-->
+                        <div class="row d-flex align-items-center mb-4">
+
+                            <!--Grid column-->
+                            <div class="text-center mb-3 col-md-12">
+                                <button type="submit" class="btn btn-success btn-block btn-rounded z-depth-1">POST</button>
+                            </div>
+                            <!--Grid column-->
+
+                        </div>
+                        <!--Grid row-->
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-
-                <label for="thief">Thief</label>
-                <input type="text" class="form-control" id="thief" [(ngModel)]="newQuote.thief" name="thief" #thief="ngModel" required>
-
-            </div>
-
-            <div class="form-group">
-
-                <label for="quote">Quote</label>
-                <textarea class="form-control" id="quote" rows="4" [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel" required></textarea>
-
-
-            </div>
-
-            <button type="submit" class="btn btn-success"> Add Quote </button>
-        </form>
+        </div>
+        <!--/.Content-->
     </div>
+</div>
+<!-- Modal -->
+
+<div class="text-center">
+    <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#darkModalForm">Post Quote</a>
 </div>
