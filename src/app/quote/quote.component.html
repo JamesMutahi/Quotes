@@ -1,10 +1,11 @@
+<br>
+<br>
 <div class="container">
     <div class="row">
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
 
-
-    <div *ngFor='let quote of quotes; let i = index' class="card text-center">
+    <div appHighlight *ngFor='let quote of quotes; let i = index' class="card text-center">
         <div class="card-header">
             Post by: {{quote.thief}}
         </div>
@@ -15,8 +16,10 @@
             </blockquote>
         </div>
         <div class="card-footer text-muted">
-            2 days ago
+            Time: {{quote.completeDate|dateCount}} ago
             <app-quote-details [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quote-details>
         </div>
     </div>
 </div>
+<br>
+<br>

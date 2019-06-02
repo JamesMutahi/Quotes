@@ -9,7 +9,8 @@ import { Quote } from './../quote';
 export class QuoteComponent implements OnInit {
 
   quotes = [
-
+    new Quote(0, 'Passenger', 'You never hate the road until you are missing home', 'James', 0),
+    new Quote(0, 'Jon Snow', 'Winter Is Coming', 'James', 0),
   ];
 
   addNewQuote(quote) {
@@ -20,7 +21,9 @@ export class QuoteComponent implements OnInit {
   }
 
   completeQuote(isComplete, index) {
-    if (isComplete) {
+    let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].quote}`)
+
+    if (toDelete) {
       this.quotes.splice(index, 1);
     }
   }
