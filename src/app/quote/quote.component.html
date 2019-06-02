@@ -1,3 +1,15 @@
-<p>
-  quote works!
-</p>
+<div *ngFor='let quote of quotes' class="card text-center">
+    <div class="card-header">
+        Stolen by: {{quote.thief}}
+    </div>
+    <div class="card-body">
+        <blockquote class="blockquote mb-0">
+            <p>Quote: {{quote.quote}}</p>
+            <footer class="blockquote-footer">By <cite title="Source Title">{{quote.author}}</cite></footer>
+        </blockquote>
+        <a href="#" class="btn btn-primary">UpVote</a> <a href="#" class="btn btn-primary">DownVote</a>
+    </div>
+    <div class="card-footer text-muted">
+        2 days ago
+    </div>
+</div>
