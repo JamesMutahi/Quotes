@@ -4,7 +4,7 @@
     </div>
 </div>
 
-<div *ngFor='let quote of quotes' class="card text-center">
+<div *ngFor='let quote of quotes; let i = index' class="card text-center">
     <div class="card-header">
         Post by: {{quote.thief}}
     </div>
@@ -17,5 +17,6 @@
     </div>
     <div class="card-footer text-muted">
         2 days ago
+        <app-quote-details [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quote-details>
     </div>
 </div>
