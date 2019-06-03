@@ -1,3 +1,4 @@
+import { QuoteDetailsComponent } from './../quote-details/quote-details.component';
 import { Component, OnInit, Input } from '@angular/core';
 import { Quote } from './../quote';
 
@@ -9,8 +10,8 @@ import { Quote } from './../quote';
 export class QuoteComponent implements OnInit {
 
   quotes = [
-    new Quote(0, 'Passenger', 'You never hate the road until you are missing home', 'James', 0),
-    new Quote(0, 'Jon Snow', 'Winter Is Coming', 'James', 0),
+    new Quote(0, 'Passenger', 'You never hate the road until you are missing home', 'James'),
+    new Quote(0, 'Jon Snow', 'Winter Is Coming', 'James'),
   ];
 
   addNewQuote(quote) {
