@@ -16,7 +16,7 @@
             </blockquote>
         </div>
         <div class="card-footer text-muted">
-            2 ago
+            <p>Uploaded <strong>{{quote.date|dateCount}}</strong> days ago on <strong>{{quote.date|date}}</strong></p>
             <app-quote-details [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quote-details>
         </div>
     </div>
