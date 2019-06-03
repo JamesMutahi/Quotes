@@ -10,7 +10,7 @@ export class HighlightDirective {
    @Input() quote: Quote;
 
   constructor(private elem: ElementRef) {
-    this.elem.nativeElement.style.backgroundColor = 'transparent';
+    this.elem.nativeElement.style.backgroundColor = 'whitesmoke';
   }
 
     @HostListener('click') onClicks() {
